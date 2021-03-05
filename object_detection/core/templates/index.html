@@ -1,0 +1,31 @@
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UFT-8" >
+        <title>Backend Visão - Solver</title>
+        {% bootstrap_css %}
+    </head>
+    <body>
+        <div class="container">
+            <h1>Backend Visão - Solver</h1>
+            {% bootstrap_messages %}
+            <p>Imagem Base</p>
+            <form action="{% url 'index' %}" method="POST" class="form" autocomplete="off" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+            </form>
+            <p>Imagem Template</p>
+            <form action="{% url 'index' %}" method="POST" class="form" autocomplete="off" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% bootstrap_form formgoal %}
+                {% buttons %}
+                    <button type="submit" class="btn btn-primary">
+                        submit
+                    </button> 
+                {% endbuttons %}
+            </form>
+        </div>
+    </body>
+    {% bootstrap_javascript jquery='full' %}
+</html>
