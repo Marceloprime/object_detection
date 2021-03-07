@@ -2,9 +2,9 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 
-img_rgb = cv2.imread('./dataset/jogo_01/base_01.jpg')
+img_rgb = cv2.imread('./output.png')
 img_gray =  cv2.cvtColor(img_rgb, cv2.COLOR_RGB2GRAY)
-template = cv2.imread('./dataset/jogo_01/objetos/01.jpeg', 0)
+template = cv2.imread('./dataset/jogo_01/objetos/06.jpeg', 0)
 width, height = template.shape[::-1]
 
 print(width, height)

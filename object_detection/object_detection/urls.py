@@ -16,9 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static  import static
+from rest_framework import routers
 from django.conf import settings
+from core.api.viewsets import ImageViewSet
+
+route = routers.DefaultRouter()
+
+route.register(r'imagens',ImageViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('core.urls'))
+    path('upload/',include(route.urls)),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT )
