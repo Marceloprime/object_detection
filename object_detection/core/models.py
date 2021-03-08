@@ -18,8 +18,8 @@ class GameBase(models.Model):
     modificado = models.DateTimeField('Data de atualização', auto_now=True)
     imagemBase = models.ImageField(upload_to=upload_image_info,blank=False)
     imagemGoal = models.ImageField(upload_to=upload_image_info,blank=False)
-    imageAnswer = models.ImageField(upload_to=upload_image_info,blank=True)
-    action = models.CharField(max_length=50, choices=ACTION_CHOICES,default='GRAYSCALE')
+    imageAnswer = models.ImageField(upload_to=upload_image_info,blank=True,null=True)
+    action = models.CharField(max_length=50, choices=ACTION_CHOICES,default='GRAYSCALE',null=True)
 
     def __str__(self):
         return str(self.id)
