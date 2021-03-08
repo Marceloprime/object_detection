@@ -1,7 +1,5 @@
 from django.contrib import admin
-from .models import PictureBase, PictureGoal, GameBase
+from .models import GameBase
 # Register your models here.
 
-admin.site.register(PictureBase)
-admin.site.register(PictureGoal)
 admin.site.register(GameBase)

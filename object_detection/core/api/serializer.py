@@ -1,10 +1,8 @@
-from core.models import GameBase, PictureGoal, PictureBase
+from core.models import GameBase
 from rest_framework import serializers
+from rest_framework.response import Response
 
-
-class GameBaseSerializer(serializers.Serializer):
-    imagemBase = serializers.ImageField()
-    imagemGoal = serializers.ImageField()
-
-    def create(self, validated_data, request):
-        return GameBase.objects.create(**validated_data)
+class GameBaseSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = GameBase
+        fields = '__all__'
