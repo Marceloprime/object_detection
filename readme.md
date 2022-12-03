@@ -28,3 +28,13 @@ Para obter a resposta acesser:
 
 http://127.0.0.1:8000/upload/imagens/answer/
 **********************************************************************
+Exemplo:
+
+Imagem objetivo:
+
+<img alt="Imagem objetivo" src="./assets/awser_image.png" >
+
+
+Imagem Resultado:
+
+<img alt="Imagem objetivo" src="./assets/goal_image.png" >

@@ -1,3 +1,6 @@
 __pycache__
 *.sqlite3
 output.png
+.env
+/env
+env
